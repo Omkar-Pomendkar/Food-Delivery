@@ -10,16 +10,20 @@ const StoreContextProvider = (props) =>
 
 
     const contextValue = {
+        // Here we are mounting food List
         food_list
 
     }
+
+    
+
     return(
 
-        <StoreContext.Provider values = {contextValue}>
+        <StoreContext.Provider value = {contextValue}>
             
             {props.children}
         </StoreContext.Provider>
     )
-}
+}  
 
 export default StoreContextProvider
