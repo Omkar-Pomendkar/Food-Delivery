@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { assets } from '../../assets/assets'
 import './Navbar.css'
 
-const Navbar = () => {
-
+const Navbar = ({setShowLogin}) => {
+// Here we ae destructuring the Navigation menu
 
     // Now we making use of underline to set menu States
     // Now we will ad  Dynamic Class Name
@@ -27,7 +27,9 @@ const Navbar = () => {
             <img src={assets.basket_icon} alt="" />
             <div className="dot"></div>
         </div>
-        <button>Signin</button>
+        <button onClick={()=>{
+          setShowLogin(true)
+        }}>Signin</button>
       </div>
     </div>
   )
